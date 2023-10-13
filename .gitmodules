@@ -1,0 +1,6 @@
+[submodule "cs211_23f_lab_sim_framework"]
+	path = cs211_23f_lab_sim_framework
+	url = git@github.com:Klaw807/cs211_23f_lab_sim_framework.git
+[submodule "riscv-gnu-toolchain"]
+	path = riscv-gnu-toolchain
+	url = https://github.com/riscv/riscv-gnu-toolchain
