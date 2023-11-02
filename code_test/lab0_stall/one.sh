@@ -37,7 +37,7 @@ simulate(){
     pushd $Simulator_dir 
     # ./Simulator $riscv_output_file -v
     ./Simulator -v -d $riscv_output_file >> $riscv_output_dir/simulator.log
-    echo -e "----pure results----\n" >> $riscv_output_dir/simulator.log
+    echo -e "\n----pure results----\n" >> $riscv_output_dir/simulator.log
     ./Simulator $riscv_output_file >> $riscv_output_dir/simulator.log
     # cp -r $Simulator_dir/dump.txt $riscv_output_dir
     popd
