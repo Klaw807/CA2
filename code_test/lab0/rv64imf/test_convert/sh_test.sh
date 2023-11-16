@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-source ../../one.sh
+source ../../../one.sh
 
 filename_prefix=$(echo ${PWD##*/})
 filefolder=$(pwd)
