@@ -1,5 +1,5 @@
 
-/home/yangyx/desktop/CA2/code_test/lab0/rv64imf/test_all/test_all.riscv:     file format elf64-littleriscv
+/home/yangyx/desktop/CA2/code_test/lab1/rv64imf/test_all/test_all.riscv:     file format elf64-littleriscv
 
 
 Disassembly of section .text:
