@@ -45,12 +45,19 @@ simulate(){
 
 build_simulator() {
     pushd $Simulator_dir
+    git branch
+    local current_git_branch=$(git branch)
+    if [[ ! $current_git_branch =~ "* $test_git_branch" ]]; then
+        echo "git branch not correspond"
+        exit 1
+    fi
     make
     popd
 }
 
 main(){
     riscv_output_file=$riscv_output_dir/$filename_prefix.riscv
+    test_git_branch=$(echo ${PWD##*/})
     build_simulator
     riscv64_build
     simulate
