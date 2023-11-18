@@ -57,7 +57,9 @@ build_simulator() {
 
 main(){
     riscv_output_file=$riscv_output_dir/$filename_prefix.riscv
+    pushd ../..
     test_git_branch=$(echo ${PWD##*/})
+    popd
     build_simulator
     riscv64_build
     simulate
