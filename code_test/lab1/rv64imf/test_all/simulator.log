@@ -115,7 +115,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf6018513 at address 0x10138
 issue Decoded instruction 0xeb018193 as addi gp,gp,-336
-wait at issue
+wait at issue because WAW hazard, dest:3, regFU[dest]:3
 readOperand: auipc
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -158,7 +158,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf6018513 at address 0x10138
 issue Decoded instruction 0xeb018193 as addi gp,gp,-336
-wait at issue
+wait at issue because WAW hazard, dest:3, regFU[dest]:3
 readOperand: Bubble
 Execute: auipc
 create EREG for FU:3
@@ -202,7 +202,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf6018513 at address 0x10138
 issue Decoded instruction 0xeb018193 as addi gp,gp,-336
-wait at issue
+wait at issue because WAW hazard, dest:3, regFU[dest]:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: auipc
@@ -291,7 +291,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf9818613 at address 0x1013c
 issue Decoded instruction 0xf6018513 as addi a0,gp,-160
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -334,7 +334,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf9818613 at address 0x1013c
 issue Decoded instruction 0xf6018513 as addi a0,gp,-160
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -378,7 +378,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf9818613 at address 0x1013c
 issue Decoded instruction 0xf6018513 as addi a0,gp,-160
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -466,7 +466,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40a60633 at address 0x10140
 issue Decoded instruction 0xf9818613 as addi a2,gp,-104
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -509,7 +509,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40a60633 at address 0x10140
 issue Decoded instruction 0xf9818613 as addi a2,gp,-104
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -553,7 +553,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40a60633 at address 0x10140
 issue Decoded instruction 0xf9818613 as addi a2,gp,-104
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -641,7 +641,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000593 at address 0x10144
 issue Decoded instruction 0x40a60633 as sub a2,a2,a0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -684,7 +684,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000593 at address 0x10144
 issue Decoded instruction 0x40a60633 as sub a2,a2,a0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -728,7 +728,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000593 at address 0x10144
 issue Decoded instruction 0x40a60633 as sub a2,a2,a0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -816,7 +816,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x318000ef at address 0x10148
 issue Decoded instruction 0x00000593 as addi a1,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sub
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -859,7 +859,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x318000ef at address 0x10148
 issue Decoded instruction 0x00000593 as addi a1,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: sub
 create EREG for FU:0
@@ -903,7 +903,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x318000ef at address 0x10148
 issue Decoded instruction 0x00000593 as addi a1,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sub
@@ -1032,7 +1032,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x57450513 at address 0x10150
 issue Decoded instruction 0x00000517 as auipc a0,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jal
 Execute: addi
 create EREG for FU:0
@@ -1076,7 +1076,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x57450513 at address 0x10150
 issue Decoded instruction 0x00000517 as auipc a0,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jal
 create EREG for FU:3
@@ -1208,7 +1208,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02c37a63 at address 0x10468
 issue Decoded instruction 0x00050713 as addi a4,a0,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -1251,7 +1251,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02c37a63 at address 0x10468
 issue Decoded instruction 0x00050713 as addi a4,a0,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -1295,7 +1295,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02c37a63 at address 0x10468
 issue Decoded instruction 0x00050713 as addi a4,a0,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -1424,7 +1424,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0a079063 at address 0x10470
 issue Decoded instruction 0x00f77793 as andi a5,a4,15
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: bgeu
 Execute: addi
 create EREG for FU:0
@@ -1468,7 +1468,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0a079063 at address 0x10470
 issue Decoded instruction 0x00f77793 as andi a5,a4,15
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: bgeu
 create EREG for FU:3
@@ -1600,8 +1600,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xff067693 at address 0x10478
 issue Decoded instruction 0x06059e63 as bne a1,zero,124
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bne
+wait at issue because RAW hazard, FU:3
 Execute: andi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -1644,8 +1645,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xff067693 at address 0x10478
 issue Decoded instruction 0x06059e63 as bne a1,zero,124
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bne
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: andi
 delete EREG in writeback for FU:0
@@ -1689,7 +1691,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xff067693 at address 0x10478
 issue Decoded instruction 0x06059e63 as bne a1,zero,124
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bne
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -1732,7 +1734,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xff067693 at address 0x10478
 issue Decoded instruction 0x06059e63 as bne a1,zero,124
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: bne
 create EREG for FU:3
@@ -1776,7 +1778,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xff067693 at address 0x10478
 issue Decoded instruction 0x06059e63 as bne a1,zero,124
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: bne
@@ -1905,7 +1907,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00e686b3 at address 0x10480
 issue Decoded instruction 0x00f67613 as andi a2,a2,15
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: andi
 Execute: bne
 create EREG for FU:3
@@ -1949,7 +1951,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00e686b3 at address 0x10480
 issue Decoded instruction 0x00f67613 as andi a2,a2,15
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: andi
 create EREG for FU:0
@@ -1995,7 +1997,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00e686b3 at address 0x10480
 issue Decoded instruction 0x00f67613 as andi a2,a2,15
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: andi
@@ -2083,7 +2085,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b73023 at address 0x10484
 issue Decoded instruction 0x00e686b3 as add a3,a3,a4
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: andi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -2126,7 +2128,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b73023 at address 0x10484
 issue Decoded instruction 0x00e686b3 as add a3,a3,a4
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: andi
 create EREG for FU:0
@@ -2170,7 +2172,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b73023 at address 0x10484
 issue Decoded instruction 0x00e686b3 as add a3,a3,a4
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: andi
@@ -2300,7 +2302,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
 Execute: add
 create EREG for FU:0
@@ -2344,7 +2346,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sd
 create EREG for FU:1
@@ -2390,7 +2392,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -2433,7 +2435,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sd
@@ -2606,8 +2608,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
+wait at issue because RAW hazard, FU:3
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -2650,8 +2653,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -2697,7 +2701,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -2740,7 +2744,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: bltu
 in exe, branch 1, need to jump to 0x10484
@@ -2872,7 +2876,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -2915,7 +2919,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sd
 create EREG for FU:1
@@ -2959,7 +2963,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -3002,7 +3006,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sd
@@ -3176,8 +3180,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
+wait at issue because RAW hazard, FU:3
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -3220,8 +3225,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -3267,7 +3273,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -3310,7 +3316,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: bltu
 in exe, branch 1, need to jump to 0x10484
@@ -3442,7 +3448,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -3485,7 +3491,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sd
 create EREG for FU:1
@@ -3529,7 +3535,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -3572,7 +3578,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01070713 at address 0x1048c
 issue Decoded instruction 0x00b73423 as sd a1,8(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sd
@@ -3746,8 +3752,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
+wait at issue because RAW hazard, FU:3
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -3790,8 +3797,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -3837,7 +3845,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bltu
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -3880,7 +3888,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: bltu
 create EREG for FU:3
@@ -3924,7 +3932,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x10498
 issue Decoded instruction 0x00061463 as bne a2,zero,8
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: bltu
@@ -4011,7 +4019,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40c306b3 at address 0x1049c
 issue Decoded instruction 0x00008067 as jalr zero,ra,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: bne
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -4054,7 +4062,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40c306b3 at address 0x1049c
 issue Decoded instruction 0x00008067 as jalr zero,ra,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: bne
 in exe, branch 1, need to jump to 0x1049c
@@ -4185,7 +4193,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000297 at address 0x104a4
 issue Decoded instruction 0x00269693 as slli a3,a3,2
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sub
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -4228,7 +4236,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000297 at address 0x104a4
 issue Decoded instruction 0x00269693 as slli a3,a3,2
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: sub
 create EREG for FU:0
@@ -4272,7 +4280,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000297 at address 0x104a4
 issue Decoded instruction 0x00269693 as slli a3,a3,2
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sub
@@ -4402,7 +4410,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00c68067 at address 0x104ac
 issue Decoded instruction 0x005686b3 as add a3,a3,t0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: auipc
 Execute: slli
 create EREG for FU:0
@@ -4446,7 +4454,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00c68067 at address 0x104ac
 issue Decoded instruction 0x005686b3 as add a3,a3,t0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: auipc
 create EREG for FU:3
@@ -4580,6 +4588,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x00b706a3 at address 0x104b4
 issue Decoded instruction 0x00b70723 as sb a1,14(a4)
 readOperand: jalr
+wait at issue because RAW hazard, FU:3
 clearFUScoreboardStatus clear FU:1
 Execute: add
 create EREG for FU:0
@@ -4624,6 +4633,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x00b706a3 at address 0x104b4
 issue Decoded instruction 0x00b70723 as sb a1,14(a4)
 readOperand: jalr
+wait at issue because RAW hazard, FU:3
 clearFUScoreboardStatus clear FU:1
 Execute: Bubble
 WriteBack: add
@@ -4710,7 +4720,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70623 at address 0x104b8
 issue Decoded instruction 0x00b706a3 as sb a1,13(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sb
 Execute: jalr
 create EREG for FU:3
@@ -4841,7 +4851,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b702a3 at address 0x104d4
 issue Decoded instruction 0x00b70323 as sb a1,6(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sb
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -4884,7 +4894,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b702a3 at address 0x104d4
 issue Decoded instruction 0x00b70323 as sb a1,6(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sb
 create EREG for FU:1
@@ -4928,7 +4938,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b702a3 at address 0x104d4
 issue Decoded instruction 0x00b70323 as sb a1,6(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -4971,7 +4981,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b702a3 at address 0x104d4
 issue Decoded instruction 0x00b70323 as sb a1,6(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sb
@@ -5058,7 +5068,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70223 at address 0x104d8
 issue Decoded instruction 0x00b702a3 as sb a1,5(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sb
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5101,7 +5111,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70223 at address 0x104d8
 issue Decoded instruction 0x00b702a3 as sb a1,5(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sb
 create EREG for FU:1
@@ -5145,7 +5155,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70223 at address 0x104d8
 issue Decoded instruction 0x00b702a3 as sb a1,5(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5188,7 +5198,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70223 at address 0x104d8
 issue Decoded instruction 0x00b702a3 as sb a1,5(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sb
@@ -5275,7 +5285,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b701a3 at address 0x104dc
 issue Decoded instruction 0x00b70223 as sb a1,4(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sb
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5318,7 +5328,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b701a3 at address 0x104dc
 issue Decoded instruction 0x00b70223 as sb a1,4(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sb
 create EREG for FU:1
@@ -5362,7 +5372,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b701a3 at address 0x104dc
 issue Decoded instruction 0x00b70223 as sb a1,4(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5405,7 +5415,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b701a3 at address 0x104dc
 issue Decoded instruction 0x00b70223 as sb a1,4(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sb
@@ -5492,7 +5502,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70123 at address 0x104e0
 issue Decoded instruction 0x00b701a3 as sb a1,3(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sb
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5535,7 +5545,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70123 at address 0x104e0
 issue Decoded instruction 0x00b701a3 as sb a1,3(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sb
 create EREG for FU:1
@@ -5579,7 +5589,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70123 at address 0x104e0
 issue Decoded instruction 0x00b701a3 as sb a1,3(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5622,7 +5632,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70123 at address 0x104e0
 issue Decoded instruction 0x00b701a3 as sb a1,3(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sb
@@ -5709,7 +5719,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b700a3 at address 0x104e4
 issue Decoded instruction 0x00b70123 as sb a1,2(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sb
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5752,7 +5762,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b700a3 at address 0x104e4
 issue Decoded instruction 0x00b70123 as sb a1,2(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sb
 create EREG for FU:1
@@ -5796,7 +5806,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b700a3 at address 0x104e4
 issue Decoded instruction 0x00b70123 as sb a1,2(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5839,7 +5849,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b700a3 at address 0x104e4
 issue Decoded instruction 0x00b70123 as sb a1,2(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sb
@@ -5926,7 +5936,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70023 at address 0x104e8
 issue Decoded instruction 0x00b700a3 as sb a1,1(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sb
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -5969,7 +5979,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70023 at address 0x104e8
 issue Decoded instruction 0x00b700a3 as sb a1,1(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sb
 create EREG for FU:1
@@ -6013,7 +6023,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70023 at address 0x104e8
 issue Decoded instruction 0x00b700a3 as sb a1,1(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -6056,7 +6066,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b70023 at address 0x104e8
 issue Decoded instruction 0x00b700a3 as sb a1,1(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sb
@@ -6143,7 +6153,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x104ec
 issue Decoded instruction 0x00b70023 as sb a1,0(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sb
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -6186,7 +6196,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x104ec
 issue Decoded instruction 0x00b70023 as sb a1,0(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sb
 create EREG for FU:1
@@ -6230,7 +6240,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x104ec
 issue Decoded instruction 0x00b70023 as sb a1,0(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -6273,7 +6283,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x104ec
 issue Decoded instruction 0x00b70023 as sb a1,0(a4)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sb
@@ -6446,7 +6456,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00d5e5b3 at address 0x104f8
 issue Decoded instruction 0x00859693 as slli a3,a1,8
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: andi
 Execute: jalr
 create EREG for FU:3
@@ -6579,7 +6589,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00050863 at address 0x10154
 issue Decoded instruction 0x57450513 as addi a0,a0,1396
-wait at issue
+wait at issue because WAW hazard, dest:10, regFU[dest]:3
 readOperand: auipc
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -6622,7 +6632,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00050863 at address 0x10154
 issue Decoded instruction 0x57450513 as addi a0,a0,1396
-wait at issue
+wait at issue because WAW hazard, dest:10, regFU[dest]:3
 readOperand: Bubble
 Execute: auipc
 create EREG for FU:3
@@ -6666,7 +6676,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00050863 at address 0x10154
 issue Decoded instruction 0x57450513 as addi a0,a0,1396
-wait at issue
+wait at issue because WAW hazard, dest:10, regFU[dest]:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: auipc
@@ -6797,8 +6807,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x50c50513 at address 0x1015c
 issue Decoded instruction 0x00000517 as auipc a0,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -6841,8 +6852,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x50c50513 at address 0x1015c
 issue Decoded instruction 0x00000517 as auipc a0,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -6886,7 +6898,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x50c50513 at address 0x1015c
 issue Decoded instruction 0x00000517 as auipc a0,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -6929,7 +6941,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x50c50513 at address 0x1015c
 issue Decoded instruction 0x00000517 as auipc a0,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: beq
 create EREG for FU:3
@@ -6973,7 +6985,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x50c50513 at address 0x1015c
 issue Decoded instruction 0x00000517 as auipc a0,0
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: beq
@@ -7060,7 +7072,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x560000ef at address 0x10160
 issue Decoded instruction 0x50c50513 as addi a0,a0,1292
-wait at issue
+wait at issue because WAW hazard, dest:10, regFU[dest]:3
 readOperand: auipc
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -7103,7 +7115,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x560000ef at address 0x10160
 issue Decoded instruction 0x50c50513 as addi a0,a0,1292
-wait at issue
+wait at issue because WAW hazard, dest:10, regFU[dest]:3
 readOperand: Bubble
 Execute: auipc
 create EREG for FU:3
@@ -7147,7 +7159,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x560000ef at address 0x10160
 issue Decoded instruction 0x50c50513 as addi a0,a0,1292
-wait at issue
+wait at issue because WAW hazard, dest:10, regFU[dest]:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: auipc
@@ -7278,7 +7290,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00012503 at address 0x10168
 issue Decoded instruction 0x260000ef as jal ra,608
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jal
 Execute: addi
 create EREG for FU:0
@@ -7322,7 +7334,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00012503 at address 0x10168
 issue Decoded instruction 0x260000ef as jal ra,608
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jal
 create EREG for FU:3
@@ -7454,7 +7466,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000613 at address 0x106c8
 issue Decoded instruction 0x00000693 as addi a3,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -7497,7 +7509,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000613 at address 0x106c8
 issue Decoded instruction 0x00000693 as addi a3,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -7541,7 +7553,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000613 at address 0x106c8
 issue Decoded instruction 0x00000693 as addi a3,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -7628,7 +7640,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000513 at address 0x106cc
 issue Decoded instruction 0x00000613 as addi a2,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -7671,7 +7683,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000513 at address 0x106cc
 issue Decoded instruction 0x00000613 as addi a2,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -7715,7 +7727,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000513 at address 0x106cc
 issue Decoded instruction 0x00000613 as addi a2,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -7802,7 +7814,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0040006f at address 0x106d0
 issue Decoded instruction 0x00000513 as addi a0,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -7845,7 +7857,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0040006f at address 0x106d0
 issue Decoded instruction 0x00000513 as addi a0,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -7889,7 +7901,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0040006f at address 0x106d0
 issue Decoded instruction 0x00000513 as addi a0,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -8061,7 +8073,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: ld
 Execute: jal
 create EREG for FU:3
@@ -8194,7 +8206,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: ld
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8237,7 +8249,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -8281,7 +8293,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8324,7 +8336,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8367,7 +8379,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8410,7 +8422,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8453,7 +8465,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8496,7 +8508,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8539,7 +8551,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8582,7 +8594,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -8625,7 +8637,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06078063 at address 0x106dc
 issue Decoded instruction 0x1f873783 as ld a5,504(a4)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ld
@@ -8754,8 +8766,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: ld
 create EREG for FU:2
 ------------ CPU STATE ------------
@@ -8798,8 +8811,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x106e4
@@ -8841,8 +8855,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x106e4
@@ -8884,8 +8899,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x106e4
@@ -8927,8 +8943,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x106e4
@@ -8970,8 +8987,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x106e4
@@ -9013,8 +9031,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x106e4
@@ -9056,8 +9075,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x106e4
@@ -9099,8 +9119,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x106e4
@@ -9142,8 +9163,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01f00813 at address 0x106e4
 issue Decoded instruction 0x0087a703 as lw a4,8(a5)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: ld
 delete EREG in writeback for FU:2
@@ -9405,6 +9427,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x3147a683 at address 0x10748
 issue Decoded instruction 0xf9dff06f as jal zero,-100
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:3
 Execute: addi
 create EREG for FU:0
@@ -9449,6 +9472,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x3147a683 at address 0x10748
 issue Decoded instruction 0xf9dff06f as jal zero,-100
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:3
 Execute: Bubble
 WriteBack: addi
@@ -9799,8 +9823,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00371813 at address 0x106f0
 issue Decoded instruction 0x02050863 as beq a0,zero,48
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: blt
+wait at issue because RAW hazard, FU:3
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -9843,8 +9868,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00371813 at address 0x106f0
 issue Decoded instruction 0x02050863 as beq a0,zero,48
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: blt
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -9890,7 +9916,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00371813 at address 0x106f0
 issue Decoded instruction 0x02050863 as beq a0,zero,48
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: blt
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -9933,7 +9959,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00371813 at address 0x106f0
 issue Decoded instruction 0x02050863 as beq a0,zero,48
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: blt
 create EREG for FU:3
@@ -9977,7 +10003,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00371813 at address 0x106f0
 issue Decoded instruction 0x02050863 as beq a0,zero,48
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: blt
@@ -10107,7 +10133,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x10c83823 at address 0x106f8
 issue Decoded instruction 0x01078833 as add a6,a5,a6
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: slli
 Execute: beq
 in exe, branch 1, need to jump to 0x1071c
@@ -10240,7 +10266,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0017071b at address 0x10724
 issue Decoded instruction 0x00369693 as slli a3,a3,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -10283,7 +10309,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0017071b at address 0x10724
 issue Decoded instruction 0x00369693 as slli a3,a3,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -10327,7 +10353,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0017071b at address 0x10724
 issue Decoded instruction 0x00369693 as slli a3,a3,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -10415,7 +10441,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00e7a423 at address 0x10728
 issue Decoded instruction 0x0017071b as addiw a4,a4,1
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: slli
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -10458,7 +10484,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00e7a423 at address 0x10728
 issue Decoded instruction 0x0017071b as addiw a4,a4,1
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: slli
 create EREG for FU:0
@@ -10502,7 +10528,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00e7a423 at address 0x10728
 issue Decoded instruction 0x0017071b as addiw a4,a4,1
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: slli
@@ -10633,8 +10659,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b7b023 at address 0x10730
 issue Decoded instruction 0x00d787b3 as add a5,a5,a3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sw
+wait at issue because RAW hazard, FU:1
 Execute: addiw
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -10677,8 +10704,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00b7b023 at address 0x10730
 issue Decoded instruction 0x00d787b3 as add a5,a5,a3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sw
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addiw
 delete EREG in writeback for FU:0
@@ -10766,7 +10794,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000513 at address 0x10734
 issue Decoded instruction 0x00b7b023 as sd a1,0(a5)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: add
 Execute: sw
 create EREG for FU:1
@@ -10810,7 +10838,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000513 at address 0x10734
 issue Decoded instruction 0x00b7b023 as sd a1,0(a5)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: add
 create EREG for FU:0
@@ -10854,7 +10882,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000513 at address 0x10734
 issue Decoded instruction 0x00b7b023 as sd a1,0(a5)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: add
@@ -11029,7 +11057,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x1ef73c23 at address 0x10740
 issue Decoded instruction 0x20070793 as addi a5,a4,512
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -11073,7 +11101,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x1ef73c23 at address 0x10740
 issue Decoded instruction 0x20070793 as addi a5,a4,512
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -11425,6 +11453,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x00011437 at address 0x103d0
 issue Decoded instruction 0x000117b7 as lui a5,17
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:3
 Execute: addi
 create EREG for FU:0
@@ -11469,6 +11498,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x00011437 at address 0x103d0
 issue Decoded instruction 0x000117b7 as lui a5,17
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:3
 Execute: Bubble
 WriteBack: addi
@@ -11555,7 +11585,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01213023 at address 0x103d4
 issue Decoded instruction 0x00011437 as lui s0,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: lui
 Execute: sd
 create EREG for FU:1
@@ -11599,7 +11629,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01213023 at address 0x103d4
 issue Decoded instruction 0x00011437 as lui s0,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: lui
 create EREG for FU:3
@@ -11643,7 +11673,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01213023 at address 0x103d4
 issue Decoded instruction 0x00011437 as lui s0,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sd
@@ -11819,7 +11849,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00113c23 at address 0x103e0
 issue Decoded instruction 0x7c440713 as addi a4,s0,1988
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -11865,7 +11895,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00113c23 at address 0x103e0
 issue Decoded instruction 0x7c440713 as addi a4,s0,1988
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -11909,7 +11939,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00113c23 at address 0x103e0
 issue Decoded instruction 0x7c440713 as addi a4,s0,1988
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -12041,7 +12071,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40e78933 at address 0x103e8
 issue Decoded instruction 0x00913423 as sd s1,8(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
 Execute: addi
 create EREG for FU:0
@@ -12085,7 +12115,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40e78933 at address 0x103e8
 issue Decoded instruction 0x00913423 as sd s1,8(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sd
 create EREG for FU:1
@@ -12131,7 +12161,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40e78933 at address 0x103e8
 issue Decoded instruction 0x00913423 as sd s1,8(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -12174,7 +12204,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40e78933 at address 0x103e8
 issue Decoded instruction 0x00913423 as sd s1,8(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sd
@@ -12346,7 +12376,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7c440413 at address 0x103f4
 issue Decoded instruction 0x40395913 as srai s2,s2,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: beq
 Execute: sub
 create EREG for FU:0
@@ -12390,7 +12420,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7c440413 at address 0x103f4
 issue Decoded instruction 0x40395913 as srai s2,s2,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: beq
 in exe, branch 1, need to jump to 0x10410
@@ -12525,7 +12555,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7d878793 at address 0x10418
 issue Decoded instruction 0x000117b7 as lui a5,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: lui
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -12568,7 +12598,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7d878793 at address 0x10418
 issue Decoded instruction 0x000117b7 as lui a5,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: lui
 create EREG for FU:3
@@ -12612,7 +12642,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7d878793 at address 0x10418
 issue Decoded instruction 0x000117b7 as lui a5,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: lui
@@ -12699,7 +12729,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7c840713 at address 0x1041c
 issue Decoded instruction 0x7d878793 as addi a5,a5,2008
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: lui
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -12742,7 +12772,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7c840713 at address 0x1041c
 issue Decoded instruction 0x7d878793 as addi a5,a5,2008
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: Bubble
 Execute: lui
 create EREG for FU:3
@@ -12786,7 +12816,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7c840713 at address 0x1041c
 issue Decoded instruction 0x7d878793 as addi a5,a5,2008
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: lui
@@ -12875,7 +12905,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40e78933 at address 0x10420
 issue Decoded instruction 0x7c840713 as addi a4,s0,1992
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -12918,7 +12948,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40e78933 at address 0x10420
 issue Decoded instruction 0x7c840713 as addi a4,s0,1992
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -12962,7 +12992,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40e78933 at address 0x10420
 issue Decoded instruction 0x7c840713 as addi a4,s0,1992
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -13049,7 +13079,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40395913 at address 0x10424
 issue Decoded instruction 0x40e78933 as sub s2,a5,a4
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -13092,7 +13122,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40395913 at address 0x10424
 issue Decoded instruction 0x40e78933 as sub s2,a5,a4
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -13136,7 +13166,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x40395913 at address 0x10424
 issue Decoded instruction 0x40e78933 as sub s2,a5,a4
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -13224,7 +13254,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02e78063 at address 0x10428
 issue Decoded instruction 0x40395913 as srai s2,s2,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sub
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -13267,7 +13297,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02e78063 at address 0x10428
 issue Decoded instruction 0x40395913 as srai s2,s2,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: sub
 create EREG for FU:0
@@ -13311,7 +13341,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02e78063 at address 0x10428
 issue Decoded instruction 0x40395913 as srai s2,s2,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sub
@@ -13441,7 +13471,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000493 at address 0x10430
 issue Decoded instruction 0x7c840413 as addi s0,s0,1992
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: beq
 Execute: srai
 create EREG for FU:0
@@ -13485,7 +13515,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000493 at address 0x10430
 issue Decoded instruction 0x7c840413 as addi s0,s0,1992
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: beq
 create EREG for FU:3
@@ -13576,7 +13606,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00043783 at address 0x10434
 issue Decoded instruction 0x00000493 as addi s1,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -13619,7 +13649,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00043783 at address 0x10434
 issue Decoded instruction 0x00000493 as addi s1,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -13663,7 +13693,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00043783 at address 0x10434
 issue Decoded instruction 0x00000493 as addi s1,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -13792,7 +13822,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00840413 at address 0x1043c
 issue Decoded instruction 0x00148493 as addi s1,s1,1
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ld
 Execute: addi
 create EREG for FU:0
@@ -13836,7 +13866,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00840413 at address 0x1043c
 issue Decoded instruction 0x00148493 as addi s1,s1,1
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -13925,7 +13955,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x000780e7 at address 0x10440
 issue Decoded instruction 0x00840413 as addi s0,s0,8
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -13968,7 +13998,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x000780e7 at address 0x10440
 issue Decoded instruction 0x00840413 as addi s0,s0,8
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -14012,7 +14042,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x000780e7 at address 0x10440
 issue Decoded instruction 0x00840413 as addi s0,s0,8
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -14142,8 +14172,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813083 at address 0x10448
 issue Decoded instruction 0xff24e8e3 as bltu s1,s2,-16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jalr
+wait at issue because RAW hazard, FU:3
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -14186,8 +14217,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813083 at address 0x10448
 issue Decoded instruction 0xff24e8e3 as bltu s1,s2,-16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jalr
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -14231,8 +14263,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813083 at address 0x10448
 issue Decoded instruction 0xff24e8e3 as bltu s1,s2,-16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jalr
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: ld
 delete EREG in writeback for FU:2
@@ -14276,7 +14309,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813083 at address 0x10448
 issue Decoded instruction 0xff24e8e3 as bltu s1,s2,-16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jalr
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -14319,7 +14352,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813083 at address 0x10448
 issue Decoded instruction 0xff24e8e3 as bltu s1,s2,-16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -14491,8 +14524,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x66450513 at address 0x10124
 issue Decoded instruction 0x00010537 as lui a0,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -14535,8 +14569,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x66450513 at address 0x10124
 issue Decoded instruction 0x00010537 as lui a0,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -14581,7 +14616,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x66450513 at address 0x10124
 issue Decoded instruction 0x00010537 as lui a0,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -14624,7 +14659,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x66450513 at address 0x10124
 issue Decoded instruction 0x00010537 as lui a0,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: beq
 in exe, branch 1, need to jump to 0x1012c
@@ -14755,7 +14790,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xeb018193 at address 0x10134
 issue Decoded instruction 0x00002197 as auipc gp,2
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jalr
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -14798,7 +14833,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xeb018193 at address 0x10134
 issue Decoded instruction 0x00002197 as auipc gp,2
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -14970,7 +15005,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813483 at address 0x10450
 issue Decoded instruction 0x01013403 as ld s0,16(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: ld
 Execute: bltu
 in exe, branch 1, need to jump to 0x10434
@@ -15145,7 +15180,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x000780e7 at address 0x10440
 issue Decoded instruction 0x00840413 as addi s0,s0,8
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: ld
 create EREG for FU:2
@@ -15189,7 +15224,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x000780e7 at address 0x10440
 issue Decoded instruction 0x00840413 as addi s0,s0,8
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -15233,7 +15268,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x000780e7 at address 0x10440
 issue Decoded instruction 0x00840413 as addi s0,s0,8
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -15366,7 +15401,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813083 at address 0x10448
 issue Decoded instruction 0xff24e8e3 as bltu s1,s2,-16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -15410,7 +15445,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813083 at address 0x10448
 issue Decoded instruction 0xff24e8e3 as bltu s1,s2,-16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -15584,8 +15619,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf6818593 at address 0x101cc
 issue Decoded instruction 0x00011537 as lui a0,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -15628,8 +15664,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf6818593 at address 0x101cc
 issue Decoded instruction 0x00011537 as lui a0,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
+wait at issue because RAW hazard, FU:3
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -15674,7 +15711,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf6818593 at address 0x101cc
 issue Decoded instruction 0x00011537 as lui a0,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: beq
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -15717,7 +15754,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xf6818593 at address 0x101cc
 issue Decoded instruction 0x00011537 as lui a0,17
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: beq
 in exe, branch 1, need to jump to 0x101dc
@@ -16065,7 +16102,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813483 at address 0x10450
 issue Decoded instruction 0x01013403 as ld s0,16(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: ld
 Execute: bltu
 create EREG for FU:3
@@ -16109,7 +16146,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813483 at address 0x10450
 issue Decoded instruction 0x01013403 as ld s0,16(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -16155,7 +16192,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813483 at address 0x10450
 issue Decoded instruction 0x01013403 as ld s0,16(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -16198,7 +16235,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813483 at address 0x10450
 issue Decoded instruction 0x01013403 as ld s0,16(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ld
@@ -16285,7 +16322,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00013903 at address 0x10454
 issue Decoded instruction 0x00813483 as ld s1,8(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: ld
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -16328,7 +16365,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00013903 at address 0x10454
 issue Decoded instruction 0x00813483 as ld s1,8(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -16372,7 +16409,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00013903 at address 0x10454
 issue Decoded instruction 0x00813483 as ld s1,8(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -16415,7 +16452,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00013903 at address 0x10454
 issue Decoded instruction 0x00813483 as ld s1,8(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ld
@@ -16502,7 +16539,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02010113 at address 0x10458
 issue Decoded instruction 0x00013903 as ld s2,0(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: ld
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -16545,7 +16582,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02010113 at address 0x10458
 issue Decoded instruction 0x00013903 as ld s2,0(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -16589,7 +16626,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02010113 at address 0x10458
 issue Decoded instruction 0x00013903 as ld s2,0(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -16632,7 +16669,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02010113 at address 0x10458
 issue Decoded instruction 0x00013903 as ld s2,0(sp)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ld
@@ -16805,7 +16842,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00050713 at address 0x10464
 issue Decoded instruction 0x00f00313 as addi t1,zero,15
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -16849,7 +16886,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00050713 at address 0x10464
 issue Decoded instruction 0x00f00313 as addi t1,zero,15
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -17026,7 +17063,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06c000ef at address 0x10174
 issue Decoded instruction 0x00000613 as addi a2,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: lw
 create EREG for FU:2
@@ -17070,7 +17107,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06c000ef at address 0x10174
 issue Decoded instruction 0x00000613 as addi a2,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -17114,7 +17151,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x06c000ef at address 0x10174
 issue Decoded instruction 0x00000613 as addi a2,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -17244,7 +17281,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xff010113 at address 0x1017c
 issue Decoded instruction 0xf71ff06f as jal zero,-144
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jal
 Execute: addi
 create EREG for FU:0
@@ -17288,7 +17325,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xff010113 at address 0x1017c
 issue Decoded instruction 0xf71ff06f as jal zero,-144
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jal
 create EREG for FU:3
@@ -17466,8 +17503,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x03010413 at address 0x101ec
 issue Decoded instruction 0x02813023 as sd s0,32(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 WARHazard FU:3 vs 1
@@ -17511,8 +17549,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x03010413 at address 0x101ec
 issue Decoded instruction 0x02813023 as sd s0,32(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -17557,7 +17596,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x03010413 at address 0x101ec
 issue Decoded instruction 0x02813023 as sd s0,32(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -17600,7 +17639,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x03010413 at address 0x101ec
 issue Decoded instruction 0x02813023 as sd s0,32(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sd
 create EREG for FU:1
@@ -17644,7 +17683,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x03010413 at address 0x101ec
 issue Decoded instruction 0x02813023 as sd s0,32(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -17687,7 +17726,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x03010413 at address 0x101ec
 issue Decoded instruction 0x02813023 as sd s0,32(sp)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sd
@@ -17817,7 +17856,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x4048f7b7 at address 0x101f4
 issue Decoded instruction 0xfe042623 as sw zero,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -17861,7 +17900,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x4048f7b7 at address 0x101f4
 issue Decoded instruction 0xfe042623 as sw zero,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -17905,7 +17944,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x4048f7b7 at address 0x101f4
 issue Decoded instruction 0xfe042623 as sw zero,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -18037,7 +18076,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef43023 at address 0x101fc
 issue Decoded instruction 0x5c378793 as addi a5,a5,1475
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: lui
 Execute: sw
 create EREG for FU:1
@@ -18081,7 +18120,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef43023 at address 0x101fc
 issue Decoded instruction 0x5c378793 as addi a5,a5,1475
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: Bubble
 Execute: lui
 create EREG for FU:3
@@ -18125,7 +18164,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef43023 at address 0x101fc
 issue Decoded instruction 0x5c378793 as addi a5,a5,1475
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sw
@@ -18258,8 +18297,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfe043783 at address 0x10204
 issue Decoded instruction 0xfc042e23 as sw zero,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -18302,8 +18342,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfe043783 at address 0x10204
 issue Decoded instruction 0xfc042e23 as sw zero,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -18348,7 +18389,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfe043783 at address 0x10204
 issue Decoded instruction 0xfc042e23 as sw zero,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: sd
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -18391,7 +18432,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfe043783 at address 0x10204
 issue Decoded instruction 0xfc042e23 as sw zero,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: sd
 create EREG for FU:1
@@ -18435,7 +18476,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfe043783 at address 0x10204
 issue Decoded instruction 0xfc042e23 as sw zero,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -18478,7 +18519,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfe043783 at address 0x10204
 issue Decoded instruction 0xfc042e23 as sw zero,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sd
@@ -18607,7 +18648,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42627 at address 0x1020c
 issue Decoded instruction 0xf00787d3 as fmv.w.x a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: ld
 Execute: sw
 create EREG for FU:1
@@ -18651,7 +18692,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42627 at address 0x1020c
 issue Decoded instruction 0xf00787d3 as fmv.w.x a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -18695,7 +18736,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42627 at address 0x1020c
 issue Decoded instruction 0xf00787d3 as fmv.w.x a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sw
@@ -18740,7 +18781,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42627 at address 0x1020c
 issue Decoded instruction 0xf00787d3 as fmv.w.x a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ld
@@ -18874,6 +18915,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x184000ef at address 0x10214
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: fmv.w.x
 create EREG for FU:6
@@ -18918,6 +18960,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x184000ef at address 0x10214
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 WriteBack: fmv.w.x
@@ -19047,7 +19090,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7b878513 at address 0x1021c
 issue Decoded instruction 0x000107b7 as lui a5,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jal
 Execute: flw
 create EREG for FU:2
@@ -19091,7 +19134,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7b878513 at address 0x1021c
 issue Decoded instruction 0x000107b7 as lui a5,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jal
 create EREG for FU:3
@@ -19268,8 +19311,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea42627 at address 0x103a4
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -19312,8 +19356,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea42627 at address 0x103a4
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -19399,7 +19444,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xe0050553 at address 0x103a8
 issue Decoded instruction 0xfea42627 as fsw fa0,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -19443,7 +19488,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xe0050553 at address 0x103a8
 issue Decoded instruction 0xfea42627 as fsw fa0,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -19487,7 +19532,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xe0050553 at address 0x103a8
 issue Decoded instruction 0xfea42627 as fsw fa0,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -19665,7 +19710,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x103b4
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: fmv.x.w
 create EREG for FU:7
@@ -19709,7 +19754,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x103b4
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -19757,7 +19802,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x103b4
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -19847,7 +19892,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x103b8
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ecall
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -19890,7 +19935,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x103b8
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ecall
 0.000000create EREG for FU:0
@@ -19934,7 +19979,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x103b8
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ecall
@@ -20064,7 +20109,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x103c0
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ld
 Execute: addi
 create EREG for FU:0
@@ -20108,7 +20153,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x103c0
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -20241,7 +20286,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813823 at address 0x103c8
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -20285,7 +20330,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813823 at address 0x103c8
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -20459,8 +20504,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfec42787 at address 0x10224
 issue Decoded instruction 0x0a0000ef as jal ra,160
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: addi
+wait at issue because RAW hazard, FU:0
 Execute: lui
 create EREG for FU:3
 ------------ CPU STATE ------------
@@ -20503,8 +20549,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfec42787 at address 0x10224
 issue Decoded instruction 0x0a0000ef as jal ra,160
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: addi
+wait at issue because RAW hazard, FU:0
 Execute: Bubble
 WriteBack: lui
 delete EREG in writeback for FU:3
@@ -20634,7 +20681,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef43023 at address 0x1022c
 issue Decoded instruction 0xe00787d3 as fmv.x.w a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: flw
 Execute: jal
 create EREG for FU:3
@@ -20810,8 +20857,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea43423 at address 0x102cc
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -20854,8 +20902,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea43423 at address 0x102cc
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -20941,7 +20990,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -20985,7 +21034,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -21029,7 +21078,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -21162,7 +21211,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -21206,7 +21255,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -21250,7 +21299,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -21341,7 +21390,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ecall
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -21384,7 +21433,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ecall
 
@@ -21429,7 +21478,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ecall
@@ -21559,7 +21608,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x102e4
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ld
 Execute: addi
 create EREG for FU:0
@@ -21603,7 +21652,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x102e4
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -21736,7 +21785,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813c23 at address 0x102ec
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -21780,7 +21829,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813c23 at address 0x102ec
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -21912,7 +21961,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef43023 at address 0x1022c
 issue Decoded instruction 0xe00787d3 as fmv.x.w a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: flw
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -21955,7 +22004,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef43023 at address 0x1022c
 issue Decoded instruction 0xe00787d3 as fmv.x.w a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: flw
 create EREG for FU:2
@@ -21999,7 +22048,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef43023 at address 0x1022c
 issue Decoded instruction 0xe00787d3 as fmv.x.w a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -22042,7 +22091,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef43023 at address 0x1022c
 issue Decoded instruction 0xe00787d3 as fmv.x.w a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: flw
@@ -22174,8 +22223,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0007879b at address 0x10234
 issue Decoded instruction 0xfe043783 as ld a5,-32(s0)
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:7
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: fmv.x.w
 create EREG for FU:7
 ------------ CPU STATE ------------
@@ -22218,8 +22268,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x0007879b at address 0x10234
 issue Decoded instruction 0xfe043783 as ld a5,-32(s0)
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:7
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: fmv.x.w
 delete EREG in writeback for FU:7
@@ -22305,7 +22356,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00078513 at address 0x10238
 issue Decoded instruction 0x0007879b as addiw a5,a5,0
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: ld
 Execute: sd
 create EREG for FU:1
@@ -22349,7 +22400,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00078513 at address 0x10238
 issue Decoded instruction 0x0007879b as addiw a5,a5,0
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -22393,7 +22444,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00078513 at address 0x10238
 issue Decoded instruction 0x0007879b as addiw a5,a5,0
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: sd
@@ -22438,7 +22489,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00078513 at address 0x10238
 issue Decoded instruction 0x0007879b as addiw a5,a5,0
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ld
@@ -22529,7 +22580,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x058000ef at address 0x1023c
 issue Decoded instruction 0x00078513 as addi a0,a5,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addiw
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -22572,7 +22623,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x058000ef at address 0x1023c
 issue Decoded instruction 0x00078513 as addi a0,a5,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addiw
 create EREG for FU:0
@@ -22616,7 +22667,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x058000ef at address 0x1023c
 issue Decoded instruction 0x00078513 as addi a0,a5,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addiw
@@ -22748,7 +22799,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7b878513 at address 0x10244
 issue Decoded instruction 0x000107b7 as lui a5,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jal
 Execute: addi
 create EREG for FU:0
@@ -22792,7 +22843,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7b878513 at address 0x10244
 issue Decoded instruction 0x000107b7 as lui a5,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jal
 create EREG for FU:3
@@ -22967,8 +23018,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00050793 at address 0x102a0
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -23011,8 +23063,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00050793 at address 0x102a0
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -23098,7 +23151,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42623 at address 0x102a4
 issue Decoded instruction 0x00050793 as addi a5,a0,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -23142,7 +23195,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42623 at address 0x102a4
 issue Decoded instruction 0x00050793 as addi a5,a0,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -23186,7 +23239,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42623 at address 0x102a4
 issue Decoded instruction 0x00050793 as addi a5,a0,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -23317,8 +23370,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000073 at address 0x102ac
 issue Decoded instruction 0x00200893 as addi a7,zero,2
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sw
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -23361,8 +23415,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000073 at address 0x102ac
 issue Decoded instruction 0x00200893 as addi a7,zero,2
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sw
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -23451,7 +23506,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102b0
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: sw
 create EREG for FU:1
@@ -23495,7 +23550,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102b0
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -23539,7 +23594,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102b0
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -23629,7 +23684,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102b4
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ecall
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -23672,7 +23727,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102b4
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ecall
 0create EREG for FU:0
@@ -23716,7 +23771,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102b4
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ecall
@@ -23846,7 +23901,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x102bc
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ld
 Execute: addi
 create EREG for FU:0
@@ -23890,7 +23945,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x102bc
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -24023,7 +24078,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813c23 at address 0x102c4
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -24067,7 +24122,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813c23 at address 0x102c4
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -24241,8 +24296,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x000107b7 at address 0x1024c
 issue Decoded instruction 0x078000ef as jal ra,120
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: addi
+wait at issue because RAW hazard, FU:0
 Execute: lui
 create EREG for FU:3
 ------------ CPU STATE ------------
@@ -24285,8 +24341,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x000107b7 at address 0x1024c
 issue Decoded instruction 0x078000ef as jal ra,120
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: addi
+wait at issue because RAW hazard, FU:0
 Execute: Bubble
 WriteBack: lui
 delete EREG in writeback for FU:3
@@ -24374,7 +24431,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7bc7a787 at address 0x10250
 issue Decoded instruction 0x000107b7 as lui a5,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jal
 Execute: addi
 create EREG for FU:0
@@ -24418,7 +24475,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7bc7a787 at address 0x10250
 issue Decoded instruction 0x000107b7 as lui a5,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jal
 create EREG for FU:3
@@ -24594,8 +24651,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea43423 at address 0x102cc
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 WARHazard FU:2 vs 1
@@ -24639,8 +24697,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea43423 at address 0x102cc
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -24727,7 +24786,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -24771,7 +24830,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -24815,7 +24874,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -24948,7 +25007,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -24992,7 +25051,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -25036,7 +25095,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -25126,7 +25185,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ecall
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -25169,7 +25228,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ecall
 
@@ -25214,7 +25273,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ecall
@@ -25344,7 +25403,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x102e4
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ld
 Execute: addi
 create EREG for FU:0
@@ -25388,7 +25447,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x102e4
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -25521,7 +25580,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813c23 at address 0x102ec
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -25565,7 +25624,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813c23 at address 0x102ec
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -25697,7 +25756,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfcf42e27 at address 0x10254
 issue Decoded instruction 0x7bc7a787 as flw fa5,1980(a5)
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: lui
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -25740,7 +25799,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfcf42e27 at address 0x10254
 issue Decoded instruction 0x7bc7a787 as flw fa5,1980(a5)
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: Bubble
 Execute: lui
 create EREG for FU:3
@@ -25784,7 +25843,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfcf42e27 at address 0x10254
 issue Decoded instruction 0x7bc7a787 as flw fa5,1980(a5)
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:3
 readOperand: Bubble
 Execute: Bubble
 WriteBack: lui
@@ -25917,8 +25976,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x5807f7d3 at address 0x1025c
 issue Decoded instruction 0xfdc42787 as flw fa5,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 Execute: flw
 create EREG for FU:2
 ------------ CPU STATE ------------
@@ -25961,8 +26021,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x5807f7d3 at address 0x1025c
 issue Decoded instruction 0xfdc42787 as flw fa5,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 ------------ CPU STATE ------------
 PC: 0x1025c
@@ -26004,8 +26065,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x5807f7d3 at address 0x1025c
 issue Decoded instruction 0xfdc42787 as flw fa5,-36(s0)
-wait at issue
+wait at issue because structure hazard, FU:2
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: flw
 delete EREG in writeback for FU:2
@@ -26094,7 +26156,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42627 at address 0x10260
 issue Decoded instruction 0x5807f7d3 as fsqrt.s a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: flw
 Execute: fsw
 create EREG for FU:1
@@ -26138,7 +26200,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42627 at address 0x10260
 issue Decoded instruction 0x5807f7d3 as fsqrt.s a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: flw
 create EREG for FU:2
@@ -26182,7 +26244,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42627 at address 0x10260
 issue Decoded instruction 0x5807f7d3 as fsqrt.s a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: fsw
@@ -26227,7 +26289,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfef42627 at address 0x10260
 issue Decoded instruction 0x5807f7d3 as fsqrt.s a5,fa5,
-wait at issue
+wait at issue because WAW hazard, dest:15, regFU[dest]:2
 readOperand: Bubble
 Execute: Bubble
 WriteBack: flw
@@ -26362,6 +26424,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: fsqrt.s
 create EREG for FU:8
@@ -26406,6 +26469,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26449,6 +26513,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26492,6 +26557,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26535,6 +26601,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26578,6 +26645,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26621,6 +26689,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26664,6 +26733,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26707,6 +26777,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26750,6 +26821,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26793,6 +26865,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26836,6 +26909,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26879,6 +26953,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26922,6 +26997,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -26965,6 +27041,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27008,6 +27085,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27051,6 +27129,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27094,6 +27173,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27137,6 +27217,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27180,6 +27261,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27223,6 +27305,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27266,6 +27349,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27309,6 +27393,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27352,6 +27437,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27395,6 +27481,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -27438,6 +27525,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 Fetched instruction 0x130000ef at address 0x10268
 issue Decoded instruction 0xfec42507 as flw fa0,-20(s0)
 readOperand: fsw
+wait at issue because RAW hazard, FU:1
 clearFUScoreboardStatus clear FU:2
 Execute: Bubble
 WriteBack: fsqrt.s
@@ -27567,7 +27655,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7b878513 at address 0x10270
 issue Decoded instruction 0x000107b7 as lui a5,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jal
 Execute: flw
 create EREG for FU:2
@@ -27611,7 +27699,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x7b878513 at address 0x10270
 issue Decoded instruction 0x000107b7 as lui a5,16
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jal
 create EREG for FU:3
@@ -27788,8 +27876,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea42627 at address 0x103a4
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 ------------ CPU STATE ------------
@@ -27832,8 +27921,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea42627 at address 0x103a4
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -27919,7 +28009,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xe0050553 at address 0x103a8
 issue Decoded instruction 0xfea42627 as fsw fa0,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -27963,7 +28053,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xe0050553 at address 0x103a8
 issue Decoded instruction 0xfea42627 as fsw fa0,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -28007,7 +28097,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xe0050553 at address 0x103a8
 issue Decoded instruction 0xfea42627 as fsw fa0,-20(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -28185,7 +28275,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x103b4
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: fmv.x.w
 create EREG for FU:7
@@ -28229,7 +28319,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x103b4
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -28277,7 +28367,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x103b4
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -28367,7 +28457,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x103b8
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ecall
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -28410,7 +28500,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x103b8
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ecall
 0.000000create EREG for FU:0
@@ -28454,7 +28544,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x103b8
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ecall
@@ -28584,7 +28674,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x103c0
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ld
 Execute: addi
 create EREG for FU:0
@@ -28628,7 +28718,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x103c0
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -28761,7 +28851,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813823 at address 0x103c8
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -28805,7 +28895,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813823 at address 0x103c8
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -28979,8 +29069,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x09c000ef at address 0x10278
 issue Decoded instruction 0x04c000ef as jal ra,76
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: addi
+wait at issue because RAW hazard, FU:0
 Execute: lui
 create EREG for FU:3
 ------------ CPU STATE ------------
@@ -29023,8 +29114,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x09c000ef at address 0x10278
 issue Decoded instruction 0x04c000ef as jal ra,76
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: addi
+wait at issue because RAW hazard, FU:0
 Execute: Bubble
 WriteBack: lui
 delete EREG in writeback for FU:3
@@ -29112,7 +29204,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000793 at address 0x1027c
 issue Decoded instruction 0x09c000ef as jal ra,156
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: jal
 Execute: addi
 create EREG for FU:0
@@ -29156,7 +29248,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000793 at address 0x1027c
 issue Decoded instruction 0x09c000ef as jal ra,156
-wait at issue
+wait at issue because structure hazard, FU:3
 readOperand: Bubble
 Execute: jal
 create EREG for FU:3
@@ -29332,8 +29424,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea43423 at address 0x102cc
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 WARHazard FU:2 vs 1
@@ -29377,8 +29470,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0xfea43423 at address 0x102cc
 issue Decoded instruction 0x02010413 as addi s0,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -29465,7 +29559,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -29509,7 +29603,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -29553,7 +29647,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000893 at address 0x102d0
 issue Decoded instruction 0xfea43423 as sd a0,-24(s0)
-wait at issue
+wait at issue because structure hazard, FU:1
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -29687,7 +29781,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -29731,7 +29825,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -29775,7 +29869,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x102d8
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -29866,7 +29960,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ecall
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -29909,7 +30003,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ecall
 
@@ -29954,7 +30048,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x01813403 at address 0x102dc
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: ecall
@@ -30084,7 +30178,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x102e4
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ld
 Execute: addi
 create EREG for FU:0
@@ -30128,7 +30222,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00008067 at address 0x102e4
 issue Decoded instruction 0x02010113 as addi sp,sp,32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ld
 create EREG for FU:2
@@ -30261,7 +30355,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813c23 at address 0x102ec
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: jalr
 Execute: addi
 create EREG for FU:0
@@ -30305,7 +30399,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813c23 at address 0x102ec
 issue Decoded instruction 0xfe010113 as addi sp,sp,-32
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: jalr
 create EREG for FU:3
@@ -30479,7 +30573,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x02813083 at address 0x10284
 issue Decoded instruction 0x00078513 as addi a0,a5,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: jal
 create EREG for FU:3
@@ -30654,8 +30748,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00300893 at address 0x10320
 issue Decoded instruction 0x01010413 as addi s0,sp,16
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: addi
 create EREG for FU:0
 WARHazard FU:2 vs 1
@@ -30699,8 +30794,9 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00300893 at address 0x10320
 issue Decoded instruction 0x01010413 as addi s0,sp,16
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: sd
+wait at issue because RAW hazard, FU:1
 Execute: Bubble
 WriteBack: addi
 delete EREG in writeback for FU:0
@@ -30787,7 +30883,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000073 at address 0x10324
 issue Decoded instruction 0x00300893 as addi a7,zero,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: sd
 create EREG for FU:1
@@ -30831,7 +30927,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000073 at address 0x10324
 issue Decoded instruction 0x00300893 as addi a7,zero,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -30875,7 +30971,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000073 at address 0x10324
 issue Decoded instruction 0x00300893 as addi a7,zero,3
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -30964,7 +31060,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x10328
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: addi
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -31007,7 +31103,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x10328
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: addi
 create EREG for FU:0
@@ -31051,7 +31147,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00000013 at address 0x10328
 issue Decoded instruction 0x00000073 as ecall
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: Bubble
 WriteBack: addi
@@ -31140,7 +31236,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813403 at address 0x1032c
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: ecall
 Execute: Bubble
 ------------ CPU STATE ------------
@@ -31183,7 +31279,7 @@ zero	ra	sp	gp	tp	t0	t1	t2	s0	s1	a0	a1	a2	a3	a4	a5	a6	a7	s2	s3	s4	s5	s6	s7	s8	s9	
 -----------------------------------
 Fetched instruction 0x00813403 at address 0x1032c
 issue Decoded instruction 0x00000013 as addi zero,zero,0
-wait at issue
+wait at issue because structure hazard, FU:0
 readOperand: Bubble
 Execute: ecall
 Program exit from an exit() system call
@@ -31193,8 +31289,10 @@ Number of Cycles: 711
 Avg Cycles per Instrcution: 3.1460
 Branch Perdiction Accuacy: -nan (Strategy: Always Not Taken)
 Number of Control Hazards: 36
-Number of Data Hazards: 0
+Number of Data Hazards: 96
 Number of Memory Hazards: 0
+Number of Structure Hazards: 303
+Number of WAW Hazards: 0
 -----------------------------------
 ----pure results----
 
@@ -31208,6 +31306,8 @@ Number of Cycles: 711
 Avg Cycles per Instrcution: 3.1460
 Branch Perdiction Accuacy: -nan (Strategy: Always Not Taken)
 Number of Control Hazards: 36
-Number of Data Hazards: 0
+Number of Data Hazards: 96
 Number of Memory Hazards: 0
+Number of Structure Hazards: 303
+Number of WAW Hazards: 0
 -----------------------------------
