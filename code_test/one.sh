@@ -6,7 +6,7 @@
 #         [-s] single step
 #         [-d] dump memory and register trace to dump.txt
 #         [-b param] branch perdiction strategy, accepted param AT, NT, BTFNT, BPB
-root_dir=~/desktop/CA2
+root_dir=/media/yangyx/F6C8CF4AC8CF0837/yyx-D/CA2
 
 # riscv
 rv64_test_dir=$root_dir/cs211_23f_lab_sim_framework/test
@@ -17,6 +17,10 @@ rv64_test_dir=$root_dir/cs211_23f_lab_sim_framework/test
 
 # Simulator
 Simulator_dir=$root_dir/cs211_23f_lab_sim_framework/build
+
+# trace_dir=
+# inclusionPolicy
+
 # Simulator_log_file=
 # var paras:
 # filename_prefix
@@ -63,6 +67,25 @@ main(){
     build_simulator
     riscv64_build
     simulate
+}
+
+# NINE= 0
+# inclusion= 1
+# EXCLUSIVE= 2
+inclusionPolicys=(0 1 2)
+# val1: trace_dir
+# val2: inclusionPolicy
+cache_simulate(){
+    echo "---------------------" >> $trace_dir/simulator.log
+    echo "inclusionPolicy:$inclusionPolicy" >> $trace_dir/simulator.log
+    pushd $Simulator_dir 
+    ./CacheOptimized $trace_dir/test.trace $inclusionPolicy >> $trace_dir/simulator.log
+    popd    
+}
+
+cache_main(){
+    build_simulator
+    cache_simulate
 }
 # riscv_output_file=$root_dir/cs211_23f_lab_sim_framework/riscv-elf/helloworld.riscv
 # simulate
