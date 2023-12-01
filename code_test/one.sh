@@ -78,6 +78,7 @@ name_inclusionPolicys="NINE INCLUSIVE EXCLUSIVE"
 # val1: trace_dir
 # val2: inclusionPolicy
 cache_simulate(){
+    rm $trace_dir/${inclusionPolicy}_$replacementPolicy.log
     echo "---------------------" >> $trace_dir/${inclusionPolicy}_$replacementPolicy.log
     echo "inclusionPolicy:$inclusionPolicy" >> $trace_dir/${inclusionPolicy}_$replacementPolicy.log
     pushd $Simulator_dir 

@@ -2,4 +2,17 @@
 inclusionPolicy:0
 inclusion type: NINE
 replacement type: BELADY
-ERROR: NO designated ReplacementPolicy
+L1 Cache:
+-------- STATISTICS ----------
+Num Read: 181708
+Num Write: 50903
+Num Hit: 198288
+Num Miss: 34323
+Total Cycles: 715920
+---------- LOWER CACHE ----------
+-------- STATISTICS ----------
+Num Read: 2196672
+Num Write: 358080
+Num Hit: 2540634
+Num Miss: 14118
+Total Cycles: 21914672
