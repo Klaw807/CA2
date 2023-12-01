@@ -1,0 +1,18 @@
+---------------------
+inclusionPolicy:2
+inclusion type: EXCLUSIVE
+replacement type: RRIP
+L1 Cache:
+-------- STATISTICS ----------
+Num Read: 181708
+Num Write: 50903
+Num Hit: 190058
+Num Miss: 42553
+Total Cycles: 779060
+---------- LOWER CACHE ----------
+-------- STATISTICS ----------
+Num Read: 2723392
+Num Write: 468160
+Num Hit: 3146181
+Num Miss: 45371
+Total Cycles: 29947148

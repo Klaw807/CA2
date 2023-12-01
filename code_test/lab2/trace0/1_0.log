@@ -1,0 +1,18 @@
+---------------------
+inclusionPolicy:1
+inclusion type: INCLUSIVE
+replacement type: LRU
+L1 Cache:
+-------- STATISTICS ----------
+Num Read: 181708
+Num Write: 50903
+Num Hit: 185983
+Num Miss: 46628
+Total Cycles: 1228534
+---------- LOWER CACHE ----------
+-------- STATISTICS ----------
+Num Read: 2984192
+Num Write: 3868352
+Num Hit: 6830297
+Num Miss: 22247
+Total Cycles: 443955776

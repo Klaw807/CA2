@@ -1,0 +1,5 @@
+---------------------
+inclusionPolicy:1
+inclusion type: INCLUSIVE
+replacement type: BELADY
+ERROR: NO designated ReplacementPolicy

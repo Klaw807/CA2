@@ -12,5 +12,8 @@ echo "" > $trace_dir/simulator.log
 # for policy in "${inclusionPolicys[@]}"
 for inclusionPolicy in "${inclusionPolicys[@]}"
 do
-    cache_main
+    for replacementPolicy in "${replacementPolicys[@]}"
+    do
+        cache_main
+    done
 done

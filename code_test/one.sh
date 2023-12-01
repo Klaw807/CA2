@@ -6,7 +6,7 @@
 #         [-s] single step
 #         [-d] dump memory and register trace to dump.txt
 #         [-b param] branch perdiction strategy, accepted param AT, NT, BTFNT, BPB
-root_dir=/media/yangyx/F6C8CF4AC8CF0837/yyx-D/CA2
+root_dir=~/desktop/CA2
 
 # riscv
 rv64_test_dir=$root_dir/cs211_23f_lab_sim_framework/test
@@ -73,13 +73,15 @@ main(){
 # inclusion= 1
 # EXCLUSIVE= 2
 inclusionPolicys=(0 1 2)
+replacementPolicys=(0 1 2)
+name_inclusionPolicys="NINE INCLUSIVE EXCLUSIVE"
 # val1: trace_dir
 # val2: inclusionPolicy
 cache_simulate(){
-    echo "---------------------" >> $trace_dir/simulator.log
-    echo "inclusionPolicy:$inclusionPolicy" >> $trace_dir/simulator.log
+    echo "---------------------" >> $trace_dir/${inclusionPolicy}_$replacementPolicy.log
+    echo "inclusionPolicy:$inclusionPolicy" >> $trace_dir/${inclusionPolicy}_$replacementPolicy.log
     pushd $Simulator_dir 
-    ./CacheOptimized $trace_dir/test.trace $inclusionPolicy >> $trace_dir/simulator.log
+    ./CacheOptimized $trace_dir/test.trace $inclusionPolicy $replacementPolicy >> $trace_dir/${inclusionPolicy}_$replacementPolicy.log
     popd    
 }
 
