@@ -1,0 +1,21 @@
+---------------------
+inclusionPolicy:0
+argc:5
+You designate a fourth parameter, meaning you are deciding if you are using victim cache
+you are using the version without victim cache for comparison
+inclusion type: NINE
+replacement type: LRU
+L1 Cache:
+-------- STATISTICS ----------
+Num Read: 181708
+Num Write: 50903
+Num Hit: 184529
+Num Miss: 48082
+Total Cycles: 838474
+---------- LOWER CACHE ----------
+-------- STATISTICS ----------
+Num Read: 3077248
+Num Write: 678080
+Num Hit: 3733114
+Num Miss: 22214
+Total Cycles: 32336212

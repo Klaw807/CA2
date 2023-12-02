@@ -86,9 +86,24 @@ cache_simulate(){
     popd    
 }
 
+# var1:ifUseVictimCache
+cache_simulate_with_victimcache(){
+    rm $trace_dir/${inclusionPolicy}_$replacementPolicy.log
+    echo "---------------------" >> $trace_dir/${inclusionPolicy}_$replacementPolicy.log
+    echo "inclusionPolicy:$inclusionPolicy" >> $trace_dir/${inclusionPolicy}_$replacementPolicy.log
+    pushd $Simulator_dir 
+    ./CacheOptimized $trace_dir/test.trace $inclusionPolicy $replacementPolicy $ifUseVictimCache >> $trace_dir/${inclusionPolicy}_$replacementPolicy.log
+    popd    
+}
+
 cache_main(){
     build_simulator
     cache_simulate
+}
+
+cache_main_with_victimcache(){
+    build_simulator
+    cache_simulate_with_victimcache
 }
 # riscv_output_file=$root_dir/cs211_23f_lab_sim_framework/riscv-elf/helloworld.riscv
 # simulate
