@@ -16,7 +16,7 @@ Total Cycles: 1244638
 ---------- LOWER CACHE ----------
 -------- STATISTICS ----------
 Num Read: 3062464
-Num Write: 3934784
-Num Hit: 6975030
+Num Write: 3949568
+Num Hit: 6989814
 Num Miss: 22218
-Total Cycles: 451750540
+Total Cycles: 453352912
