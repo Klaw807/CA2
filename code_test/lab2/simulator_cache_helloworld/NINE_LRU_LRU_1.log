@@ -1,0 +1,20 @@
+---------------------
+inclusionPolicy:NINE
+inclusion type: NINE
+111
+LRU
+L1ReplacementType: LRU
+L2ReplacementType: LRU
+Using victim cache
+Using victim cache
+Hello, World!
+Program exit from an exit() system call
+------------ STATISTICS -----------
+Number of Instructions: 152
+Number of Cycles: 255
+Avg Cycles per Instrcution: 1.6776
+Branch Perdiction Accuacy: 0.5294 (Strategy: Always Not Taken)
+Number of Control Hazards: 25
+Number of Data Hazards: 78
+Number of Memory Hazards: 1
+-----------------------------------

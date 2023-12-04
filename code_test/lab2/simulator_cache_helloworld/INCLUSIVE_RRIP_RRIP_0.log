@@ -1,0 +1,19 @@
+---------------------
+inclusionPolicy:INCLUSIVE
+inclusion type: INCLUSIVE
+111
+RRIP
+L1ReplacementType: RRIP
+L2ReplacementType: RRIP
+NOT Using victim cache
+Hello, World!
+Program exit from an exit() system call
+------------ STATISTICS -----------
+Number of Instructions: 152
+Number of Cycles: 262
+Avg Cycles per Instrcution: 1.7237
+Branch Perdiction Accuacy: 0.5294 (Strategy: Always Not Taken)
+Number of Control Hazards: 25
+Number of Data Hazards: 77
+Number of Memory Hazards: 1
+-----------------------------------

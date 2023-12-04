@@ -6,7 +6,7 @@
 #         [-s] single step
 #         [-d] dump memory and register trace to dump.txt
 #         [-b param] branch perdiction strategy, accepted param AT, NT, BTFNT, BPB
-root_dir=~/desktop/CA2
+root_dir=../..
 
 # riscv
 rv64_test_dir=$root_dir/cs211_23f_lab_sim_framework/test
@@ -48,13 +48,14 @@ simulate(){
 }
 
 build_simulator() {
+    mkdir $Simulator_dir
     pushd $Simulator_dir
-    git branch
-    local current_git_branch=$(git branch)
-    if [[ ! $current_git_branch =~ "* $test_git_branch" ]]; then
-        echo "git branch not correspond"
-        exit 1
-    fi
+    if [ -f "Makefile" ]; then
+        echo "Makefile 存在"
+    else
+        echo "Makefile 不存在"
+        cmake ..
+    fi        
     make
     popd
 }
