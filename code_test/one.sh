@@ -38,11 +38,12 @@ riscv64_build(){
 # var para1:$riscv_output_file
 simulate(){
     echo "" > $riscv_output_dir/simulator.log
+    echo "" > $riscv_output_dir/simulator_pure.log
     pushd $Simulator_dir 
     # ./Simulator $riscv_output_file -v
     ./Simulator -v -d $riscv_output_file >> $riscv_output_dir/simulator.log
-    echo -e "----pure results----\n" >> $riscv_output_dir/simulator.log
-    ./Simulator $riscv_output_file >> $riscv_output_dir/simulator.log
+    echo -e "----pure results----\n" >> $riscv_output_dir/simulator_pure.log
+    ./Simulator $riscv_output_file >> $riscv_output_dir/simulator_pure.log
     # cp -r $Simulator_dir/dump.txt $riscv_output_dir
     popd
 }
